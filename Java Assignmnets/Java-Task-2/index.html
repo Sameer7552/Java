@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family:'Times New Roman', Times, serif;
+        }
+        button{
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background-color: rgb(85, 5, 5);
+            margin-left: 20px;
+            height: 40px;
+            padding: 5px;
+            width: 100px;
+        }
+        input{
+            border: none;
+            outline: none;
+            box-shadow: rgb(138, 138, 138) 5px 5px 20px;
+            padding: 5px 20px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Enter a palindrome word</h1>
+    <input type="text" placeholder="" id="txt">
+    <button type="submit" onclick="submit()">Enter</button>
+    <script>
+        function submit(){
+            var a = document.getElementById('txt').value;
+            var len = (a.length)-1;
+            var check = true;
+            for (var i = 0; i <= len; i++){
+                if (a[i] != a[len-i]){
+                    check = false;
+                }
+            }
+            if(check){
+                alert("This word is palindrome");
+            }
+            else{
+                alert("This word is not palindrome");
+            }
+
+        }
+    </script>
+</body>
+</html>

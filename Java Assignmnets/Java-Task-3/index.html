@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            font-weight: 700;
+
+        }
+        p{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+    <title>Task</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <p id="array" ></p>
+    <h1>Even Array</h1>
+    <p id="even" ></p>
+    <h1>Odd Array</h1>
+    <p id="odd" ></p>
+    <script>
+        var array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+        var j = 0
+        var k = 0
+        var even = []
+        var odd = []
+        for (var i = 0; i < array.length; i++){
+            if (array[i] % 2 == 0){
+                even[j] = array[i]
+                j++ 
+            }
+            else{
+                odd[k] = array[i]
+                k++
+            }
+        }
+        
+        document.getElementById("array").innerHTML = array;
+        document.getElementById("even").innerHTML = even;
+        document.getElementById("odd").innerHTML = odd;
+
+    </script>
+</body>
+</html>
