@@ -8,30 +8,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Bungee Spice', sans-serif;
-}
-
-.centered-div {
-    background-color: rgba(255, 255, 255, 0.178);
-    padding: 100px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-    font-size: 60px;
-    font-weight: 700;
 }

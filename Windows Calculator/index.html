@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo.png" type="image/png">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="mycontainer">
+        <div class="mycontainer-2">
+            <div class="row">
+                <div class="col-left">
+                    <span><img src="./img/logo.png" alt="" width="15" height="15"></span>
+                    <span class="cal ml-1">Calculator</span>
+                </div>
+                <div class="col-right">
+                    <span><i class="fa-solid fa-minus mr-2" style="color: #000000;"></i></span>
+                    <span><i class="fa-regular fa-square mr-2 fa-sm" style="color: #000000;"></i></span>
+                    <span><i class="fa-solid fa-xmark" style="color: #000000;"></i></span>
+                </div>
+            </div>
+
+<br>
+            <div class="row">
+                <div class="col-left">
+                    <i class="fa-solid fa-bars mr-1" style="color: #000000;"></i>
+                    <span class="heading ml-1 mr-1">Standard</span>
+                    <span><i class="fa-solid fa-arrow-up-right-from-square ml-1" style="color: #000000;"></i></span>
+                </div>
+                <div class="col-right">
+                    <span><i class="fa-solid fa-clock-rotate-left" style="color: #000000;"></i></span>
+                </div>
+            </div>
+
+<br>
+
+            <div class="show">
+                <div class="">
+                    <input type="text" name="" id="previous" class="pre" readonly>
+                </div>
+                <div class="mt-1">
+                    <input type="text" name="" id="current" placeholder="0" class="ans" readonly>
+                </div>
+            </div>
+<br>
+</div>
+<div class="mycontainer-3">
+
+            <div class="row" style="padding: 5px 15px 5px 15px;">
+                <div class="opt">MC</div>
+                <div class="optD">MR</div>
+                <div class="optD">M<i class="fa-solid fa-plus fa-2xs" style="color: #000000;"></i></div>
+                <div class="optD">M<i class="fa-solid fa-minus fa-2xs" style="color: #000000;"></i></div>
+                <div class="opt">MS</div>
+                <div class="opt">M<i class="fa-solid fa-chevron-down fa-xs" style="color: #0000007c;"></i></div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;" onclick="percentage()">%</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="clear_cur()">CE</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="clear_all()">C</button>
+                </div>
+                <div class="col">
+                    <button type="button"><img src="./img/erase.png" alt="" width="20px" onclick="erace()"></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;"><span><sup>1</sup>&frasl;<sub>x</sub></span></button>
+                </div>
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;"><span>x <sup>2</sup></span></button>
+                </div>
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;"><span><sup>2</sup><i class="fa-solid fa-square-root-variable fa-sm" style="color: #000000;"></i></button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="div()"><i class="fa-solid fa-divide fa-sm" style="color: #000000;" ></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="seven()" id="seven">7</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="eight()" id="eight">8</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="nine()" id="nine">9</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="mul()"><i class="fa-solid fa-xmark fa-sm" style="color: #000000;"></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="four()" id="four">4</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="five()" id="five">5</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="six()" id="six">6</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="sub()"><i class="fa-solid fa-minus fa-sm" style="color: #000000;"></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="one()" id="one">1</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="two()" id="two">2</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="three()" id="three">3</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="add()"><i class="fa-solid fa-plus fa-sm" style="color: #000000;"></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;"><i class="fa-solid fa-plus-minus fa-sm" style="color: #000000;"></i></sub></span></button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="zero()" id="zero">0</button>
+                </div>
+                <div class="col">
+                    <button type="button" style="background-color: #ff000041;"><b>.</b></button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="equal()" style="background-color: rgba(44, 83, 167, 0.966); color: white;"><i class="fa-solid fa-equals fa-sm" style="color: white;"></i></button>
+                </div>
+            </div>
+
+
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/d71e3987f2.js" crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+</body>
+</html>

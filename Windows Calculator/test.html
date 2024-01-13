@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Input</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    #animated-input {
+      width: 300px; /* Set your desired width */
+      font-size: 50px; /* Set your default font size */
+      transition: font-size 0.3s ease; /* Add transition for smooth animation */
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="animated-input" placeholder="Enter text">
+
+<script>
+
+$(document).ready(function() {
+  const animatedInput = $('#animated-input');
+  const defaultFontSize = parseInt(animatedInput.css('font-size'));
+  const maxWidth = parseInt(animatedInput.css('width'));
+
+  animatedInput.on('input', function() {
+    const inputValue = $(this).val();
+    const maxChars = Math.floor(maxWidth / (defaultFontSize / 2)); // Calculate the maximum characters that can fit
+
+    if (inputValue.length > maxChars) {
+      const newSize = defaultFontSize - (inputValue.length - maxChars) * 2; // Adjust the factor for gradual reduction
+      $(this).css('font-size', newSize + 'px');
+    } else {
+      $(this).css('font-size', defaultFontSize + 'px'); // Reset to default size
+    }
+  });
+});
+
+</script>
+</body>
+</html>
