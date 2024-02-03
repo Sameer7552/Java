@@ -169,6 +169,7 @@ body {
   font-weight: 900;
   height: auto;
   margin: auto;
+  cursor: pointer;
 }
 .italic{
   font-family: 'Times New Roman', Times, serif;
@@ -177,6 +178,7 @@ body {
   font-weight: 600;
   height: auto;
   margin: auto;
+  cursor: pointer;
 }
 .underline{
   font-family: 'Times New Roman', Times, serif;
@@ -185,6 +187,7 @@ body {
   font-weight: 600;
   height: auto;
   margin: auto;
+  cursor: pointer;
 }
 #fontcolor{
   width: 25px;
